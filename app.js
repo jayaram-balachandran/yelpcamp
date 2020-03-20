@@ -20,10 +20,14 @@ var indexRoutes       = require("./routes/index");
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 
-//mongoose.connect("mongodb://localhost/yelp_camp",{ useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost/yelp_camp",{ useUnifiedTopology: true }).then(() =>  {
+	console.log("connected to DB");
+}).catch(err => {
+	console.log('error:' , err.message);
+});
 //mongodb+srv://jayaram:<password>@cluster0-jvxnu.mongodb.net/test?retryWrites=true&w=majority
 
-mongoose.connect("//mongodb+srv://jayaram:Waheguru@3@cluster0-jvxnu.mongodb.net/test?retryWrites=true&w=majority",{ useUnifiedTopology: true });
+//mongoose.connect("//mongodb+srv://jayaram:Waheguru@3@cluster0-jvxnu.mongodb.net/test?retryWrites=true&w=majority",{ useUnifiedTopology: true });
 
 
 
