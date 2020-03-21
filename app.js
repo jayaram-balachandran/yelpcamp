@@ -83,7 +83,12 @@ app.use(campgroundRoutes);
 
 
 
-
-app.listen(8080, function(){
+app.listen(process.env.PORT, function(){
 	console.log("server started.");	
 });
+
+
+
+// app.listen(8080, function(){
+// 	console.log("server started.");	
+// });
